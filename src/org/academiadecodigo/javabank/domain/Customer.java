@@ -14,6 +14,13 @@ public class Customer {
 
     private AccountManager accountManager;
     private Map<Integer, Account> accounts = new HashMap<>();
+    private String name;
+    private int customerNumber;
+
+    public Customer() {
+
+    }
+
 
     /**
      * Sets the account manager

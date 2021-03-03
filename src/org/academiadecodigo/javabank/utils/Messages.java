@@ -9,5 +9,6 @@ public class Messages {
     public final static String HAVE_ACCOUNTS = "YOU HAVE THE FOLLOWING ACCOUNTS: ";
     public final static String TOTAL_BALANCE = "TOTAL BALANCE: ";
     public final static String DEPOSIT = "AMOUNT TO DEPOSIT: ";
+    public final static String CHOOSE_ONE_OPTION = Color.ANSI_GREEN + "********** " + Color.RESET + "CHOOSE AN OPTION" + Color.ANSI_GREEN + " **********" + Color.RESET;
 
 }

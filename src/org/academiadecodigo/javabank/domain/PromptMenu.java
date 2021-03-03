@@ -15,6 +15,8 @@ public class PromptMenu {
     private Messages message;
     private Account account;
     private AccountManager accountManager;
+    private Customer customer;
+    private String inputAmount;
 
 
     public PromptMenu() {
@@ -24,29 +26,39 @@ public class PromptMenu {
     }
 
     public void welcome() {
-        System.out.println("\n" + message.WELCOME + "\n");
+        System.out.println("\n" + Messages.WELCOME + "\n");
 
 
     }
 
     public void askCostumerNumber() {
         StringInputScanner askCostumerNumber = new StringInputScanner();
-        askCostumerNumber.setMessage(message.COSTUMER_NUMBER);
+        askCostumerNumber.setMessage(Messages.COSTUMER_NUMBER);
         costumerNumber = prompt.getUserInput(askCostumerNumber);
+
     }
 
     public void mainMenu() {
-        String[] menuOptions = {"VIEW BALANCE", "MAKE DEPOSIT", "MAKE WITHDRAWAL", "OPEN ACCOUNT", "QUIT"};
-        int amount;
-        String messages = "Heeeeeee";
+        String[] menuOptions = {"VIEW BALANCE", "MAKE DEPOSIT", "MAKE WITHDRAWAL", "OPEN ACCOUNT", Color.ANSI_GREEN + "RETURN" + Color.RESET};
+        String messages = Messages.CHOOSE_ONE_OPTION;
         StringInputScanner result = new StringInputScanner();
         //MenuInputScanner
         switch (menuMaker(menuOptions, messages)) {
             case 1:
-                result.setMessage(message.TOTAL_BALANCE +  account.getBalance());
+                System.out.println(Messages.TOTAL_BALANCE + account.getBalance());
                 break;
             //case 2:
                 //1result.setMessage(message.DEPOSIT + prompt.getUserInput(amount));
+            case 2:
+                StringInputScanner amount = new StringInputScanner();
+                amount.setMessage(Messages.DEPOSIT);
+                inputAmount = prompt.getUserInput(amount);
+                amount.setMessage(Messages.TOTAL_BALANCE);
+
+            case 5:
+                welcome();
+                askCostumerNumber();
+                break;
 
         }
 
