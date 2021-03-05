@@ -1,6 +1,6 @@
 package org.academiadecodigo.javabank.controller;
 
-import org.academiadecodigo.javabank.model.Bank;
+import org.academiadecodigo.javabank.service.Bank;
 import org.academiadecodigo.javabank.view.LoginView;
 
 /**

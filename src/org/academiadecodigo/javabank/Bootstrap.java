@@ -4,8 +4,8 @@ import org.academiadecodigo.bootcamp.Prompt;
 import org.academiadecodigo.javabank.controller.*;
 import org.academiadecodigo.javabank.controller.transaction.DepositController;
 import org.academiadecodigo.javabank.controller.transaction.WithdrawalController;
-import org.academiadecodigo.javabank.managers.AccountManager;
-import org.academiadecodigo.javabank.model.Bank;
+import org.academiadecodigo.javabank.service.AccountManager;
+import org.academiadecodigo.javabank.service.Bank;
 import org.academiadecodigo.javabank.model.Customer;
 import org.academiadecodigo.javabank.view.*;
 

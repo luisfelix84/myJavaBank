@@ -1,14 +1,15 @@
-package org.academiadecodigo.javabank.model;
+package org.academiadecodigo.javabank.service;
 
-import org.academiadecodigo.javabank.managers.AccountManager;
+import org.academiadecodigo.javabank.model.Customer;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /**
  * The bank entity
  */
-public class Bank {
+public class Bank implements CustomerService{
 
     private AccountManager accountManager;
     private HashMap<Integer, Customer> customers;
@@ -91,5 +92,30 @@ public class Bank {
      */
     public void addCustomer(Customer customer) {
         customers.put(customer.getId(), customer);
+    }
+
+    @Override
+    public Customer get(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> list() {
+        return null;
+    }
+
+    @Override
+    public Set<Integer> listCustomerAccountIds(Integer id) {
+        return null;
+    }
+
+    @Override
+    public double getBalance(int customerId) {
+        return 0;
+    }
+
+    @Override
+    public void add(Customer customer) {
+
     }
 }

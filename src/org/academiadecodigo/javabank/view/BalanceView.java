@@ -1,7 +1,7 @@
 package org.academiadecodigo.javabank.view;
 
 import org.academiadecodigo.javabank.controller.BalanceController;
-import org.academiadecodigo.javabank.model.Bank;
+import org.academiadecodigo.javabank.service.Bank;
 import org.academiadecodigo.javabank.model.Customer;
 import org.academiadecodigo.javabank.model.account.Account;
 

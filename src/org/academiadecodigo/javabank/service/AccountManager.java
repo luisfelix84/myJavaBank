@@ -1,4 +1,4 @@
-package org.academiadecodigo.javabank.managers;
+package org.academiadecodigo.javabank.service;
 
 import org.academiadecodigo.javabank.factories.AccountFactory;
 import org.academiadecodigo.javabank.model.account.Account;
@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Responsible for managing accounts
  */
-public class AccountManager {
+public class AccountManager implements AccountService{
 
     private AccountFactory accountFactory = new AccountFactory();
     private Map<Integer, Account> accountMap;
@@ -33,6 +33,12 @@ public class AccountManager {
         Account newAccount = accountFactory.createAccount(accountType);
         accountMap.put(newAccount.getId(), newAccount);
         return newAccount;
+    }
+
+    @Override
+    public void add(Account account) {
+
+
     }
 
     /**

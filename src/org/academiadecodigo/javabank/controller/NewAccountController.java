@@ -1,9 +1,10 @@
 package org.academiadecodigo.javabank.controller;
 
-import org.academiadecodigo.javabank.managers.AccountManager;
-import org.academiadecodigo.javabank.model.Bank;
+import org.academiadecodigo.javabank.service.AccountManager;
+import org.academiadecodigo.javabank.service.Bank;
 import org.academiadecodigo.javabank.model.account.Account;
 import org.academiadecodigo.javabank.model.account.AccountType;
+import org.academiadecodigo.javabank.service.CustomerService;
 import org.academiadecodigo.javabank.view.NewAccountView;
 
 /**
@@ -11,7 +12,7 @@ import org.academiadecodigo.javabank.view.NewAccountView;
  */
 public class NewAccountController extends AbstractController {
 
-    private Bank bank;
+    private CustomerService bank;
     private Integer newAccountId;
 
     /**
