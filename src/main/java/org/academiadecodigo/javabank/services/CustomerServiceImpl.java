@@ -1,17 +1,19 @@
 package org.academiadecodigo.javabank.services;
 
-import org.academiadecodigo.javabank.model.AbstractModel;
 import org.academiadecodigo.javabank.model.Customer;
 import org.academiadecodigo.javabank.model.Model;
 import org.academiadecodigo.javabank.model.account.Account;
 
+import javax.persistence.EntityManagerFactory;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * An {@link CustomerService} implementation
  */
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl extends CustomerServiceDatabase implements CustomerService {
+
+    private EntityManagerFactory emf;
 
     private Map<Integer, Customer> customerMap = new HashMap<>();
 
@@ -72,10 +74,13 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void add(Customer customer) {
 
+
         if (customer.getId() == null) {
             customer.setId(getNextId());
         }
 
         customerMap.put(customer.getId(), customer);
+
+
     }
 }

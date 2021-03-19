@@ -5,15 +5,22 @@ import org.academiadecodigo.javabank.services.AccountServiceImpl;
 import org.academiadecodigo.javabank.services.AuthServiceImpl;
 import org.academiadecodigo.javabank.services.CustomerServiceImpl;
 
+import javax.persistence.EntityManagerFactory;
+
 public class App {
 
     public static void main(String[] args) {
 
+        BootstrapDatabase bsd = new BootstrapDatabase();
+        EntityManagerFactory emf = bsd.start();
+
         App app = new App();
-        app.bootStrap();
+        app.bootStrap(emf);
+
+        bsd.stop();
     }
 
-    private void bootStrap() {
+    private void bootStrap(EntityManagerFactory emf) {
 
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.setAuthService(new AuthServiceImpl());

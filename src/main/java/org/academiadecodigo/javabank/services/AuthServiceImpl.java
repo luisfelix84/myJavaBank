@@ -25,7 +25,9 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public boolean authenticate(Integer id) {
 
+
         accessingCustomer = customerService.get(id);
+
         return accessingCustomer != null;
     }
 
