@@ -1,8 +1,10 @@
-package org.academiadecodigo.javabank.services.jpa;
+package org.academiadecodigo.javabank.services;
 
 import org.academiadecodigo.javabank.model.account.AbstractAccount;
 import org.academiadecodigo.javabank.model.account.Account;
-import org.academiadecodigo.javabank.services.AccountService;
+import org.academiadecodigo.javabank.persistence.TransactionManager;
+import org.academiadecodigo.javabank.persistence.dao.AccountDao;
+import org.academiadecodigo.javabank.persistence.dao.jpa.GenericJpaDao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,18 +14,28 @@ import java.util.Optional;
 /**
  * A JPA {@link AccountService} implementation
  */
-public class JpaAccountService extends AbstractJpaService<Account> implements AccountService {
+public class AccountServiceImpl implements AccountService {
 
-    /**
-     * @see AbstractJpaService#AbstractJpaService(EntityManagerFactory, Class)
-     */
-    public JpaAccountService(EntityManagerFactory emf) {
-        super(emf, Account.class);
+    private GenericJpaDao genericJpaDao;
+    private TransactionManager tm;
+
+    public AccountServiceImpl(GenericJpaDao genericJpaDao, TransactionManager tm) {
+        this.genericJpaDao = genericJpaDao;
+        this.tm = tm;
     }
 
-    /**
-     * @see AccountService#deposit(Integer, double)
-     */
+
+
+    @Override
+    public Account get(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Integer add(Account account) {
+        return null;
+    }
+
     @Override
     public void deposit(Integer id, double amount) {
 

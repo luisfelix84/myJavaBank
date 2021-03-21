@@ -1,8 +1,10 @@
-package org.academiadecodigo.javabank.services.jpa;
+package org.academiadecodigo.javabank.services;
 
 import org.academiadecodigo.javabank.model.Customer;
 import org.academiadecodigo.javabank.model.Model;
 import org.academiadecodigo.javabank.model.account.Account;
+import org.academiadecodigo.javabank.persistence.TransactionManager;
+import org.academiadecodigo.javabank.persistence.dao.CustomerDao;
 import org.academiadecodigo.javabank.services.CustomerService;
 
 import javax.persistence.EntityManager;
@@ -11,21 +13,32 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * A JPA {@link CustomerService} implementation
- */
-public class JpaCustomerService extends AbstractJpaService<Customer> implements CustomerService {
 
-    /**
-     * @see AbstractJpaService#AbstractJpaService(EntityManagerFactory, Class)
-     */
-    public JpaCustomerService(EntityManagerFactory emf) {
-        super(emf, Customer.class);
+public class CustomerServiceImpl implements CustomerService {
+
+    private CustomerDao customerDao;
+    private TransactionManager transactionManager;
+
+    public void setCustomerDao(CustomerDao customerDao) {
+        this.customerDao = customerDao;
     }
 
-    /**
-     * @see CustomerService#getBalance(Integer)
-     */
+    public void setTransactionManager(TransactionManager transactionManager) {
+        this.transactionManager = transactionManager;
+    }
+
+
+    @Override
+    public Customer get(Integer id) {
+
+        try {
+
+            transactionManager.beginRead();
+            return customerDao.fin
+        }
+        return null;
+    }
+
     @Override
     public double getBalance(Integer id) {
 
