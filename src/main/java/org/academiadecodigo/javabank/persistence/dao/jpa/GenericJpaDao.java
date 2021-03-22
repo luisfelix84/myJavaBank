@@ -3,9 +3,6 @@ package org.academiadecodigo.javabank.persistence.dao.jpa;
 import org.academiadecodigo.javabank.model.AbstractModel;
 import org.academiadecodigo.javabank.persistence.SessionManager;
 import org.academiadecodigo.javabank.persistence.dao.GenericDao;
-import org.hibernate.HibernateException;
-
-import javax.persistence.EntityManager;
 import javax.persistence.RollbackException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;

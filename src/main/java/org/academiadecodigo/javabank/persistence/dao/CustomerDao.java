@@ -4,7 +4,7 @@ import org.academiadecodigo.javabank.model.Customer;
 
 import java.util.List;
 
-public interface CustomerDao extends GenericDao<Customer> {
+public interface CustomerDao {
 
     List<Integer> getCustomerIds();
 

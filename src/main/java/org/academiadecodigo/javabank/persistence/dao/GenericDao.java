@@ -4,7 +4,7 @@ import org.academiadecodigo.javabank.model.AbstractModel;
 
 import java.util.List;
 
-public interface GenericDao<T extends AbstractModel> {
+public interface GenericDao<T extends Model> {
 
     List<T> findAll();
 

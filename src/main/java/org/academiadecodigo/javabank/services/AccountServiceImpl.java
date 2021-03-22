@@ -107,7 +107,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void transfer(Integer srcId, Integer dstId, double amount) {
 
-        EntityManager em = emf.createEntityManager();
+
 
         try {
 
