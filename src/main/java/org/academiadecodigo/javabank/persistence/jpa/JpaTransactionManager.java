@@ -14,9 +14,9 @@ public class JpaTransactionManager implements TransactionManager {
      *
      * @param sm the session manager
      */
-    public JpaTransactionManager(JpaSessionManager sm) {
+   /* public JpaTransactionManager(JpaSessionManager sm) {
         this.sm = sm;
-    }
+    }*/
 
     /**
      * @see TransactionManager#beginRead()

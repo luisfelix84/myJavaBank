@@ -26,10 +26,10 @@ public abstract class GenericJpaDao<T extends Model> implements Dao<T> {
      * @param sm the session manager factory
      * @param modelType the model type
      */
-    public GenericJpaDao(JpaSessionManager sm, Class<T> modelType) {
+    /*public GenericJpaDao(JpaSessionManager sm, Class<T> modelType) {
         this.sm = sm;
         this.modelType = modelType;
-    }
+    }*/
 
     /**
      * @see Dao#findAll()

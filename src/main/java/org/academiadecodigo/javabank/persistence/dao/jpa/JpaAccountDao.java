@@ -12,7 +12,7 @@ public class JpaAccountDao extends GenericJpaDao<Account> implements AccountDao 
     /**
      * @see GenericJpaDao#GenericJpaDao(JpaSessionManager, Class)
      */
-    public JpaAccountDao(JpaSessionManager sm) {
+    /*public JpaAccountDao(JpaSessionManager sm) {
         super(sm, Account.class);
-    }
+    }*/
 }

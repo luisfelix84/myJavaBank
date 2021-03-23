@@ -5,6 +5,7 @@ import org.academiadecodigo.javabank.view.LoginView;
 /**
  * The {@link LoginView} controller
  */
+
 public class LoginController extends AbstractController {
 
     private Controller nextController;

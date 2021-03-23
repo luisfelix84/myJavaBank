@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="loginController" class="org.academiadecodigo.javabank.controller.LoginController">
+        <property name="authService" ref="authService"/>
+        <property name="nextController" ref="mainController"/>
+        <property name="view" ref="loginview"/>
+    </bean>
+
+    <bean id="mainController" class="org.academiadecodigo.javabank.controller.MainController">
+        <property name="view" ref="loginview"/>
+        <property name="authService" ref="authService"/>
+        <property name="controllerMap">
+            <map>
+                <entry key="#{T(org.academiadecodigo.javabank.view.UserOptions).GET" value-ref=""/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

@@ -29,7 +29,7 @@ public class JpaCustomerDaoTest {
 
         sm = mock(JpaSessionManager.class);
         em = mock(EntityManager.class);
-        customerDao = new JpaCustomerDao(sm);
+        customerDao = new JpaCustomerDao();
 
         when(sm.getCurrentSession()).thenReturn(em);
 

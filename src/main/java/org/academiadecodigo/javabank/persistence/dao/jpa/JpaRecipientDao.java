@@ -12,7 +12,7 @@ public class JpaRecipientDao extends GenericJpaDao<Recipient> implements Recipie
     /**
      * @see GenericJpaDao#GenericJpaDao(JpaSessionManager, Class)
      */
-    public JpaRecipientDao(JpaSessionManager sm) {
+    /*public JpaRecipientDao(JpaSessionManager sm) {
         super(sm, Recipient.class);
-    }
+    }*/
 }

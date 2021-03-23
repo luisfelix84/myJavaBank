@@ -30,7 +30,7 @@ public class JpaRecipientDaoTest {
     public void setup() {
         sm = mock(JpaSessionManager.class);
         em = mock(EntityManager.class);
-        recipientDao = new JpaRecipientDao(sm);
+        recipientDao = new JpaRecipientDao();
 
         when(sm.getCurrentSession()).thenReturn(em);
     }

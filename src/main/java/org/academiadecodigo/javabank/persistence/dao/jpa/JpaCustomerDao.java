@@ -18,9 +18,9 @@ public class JpaCustomerDao extends GenericJpaDao<Customer> implements CustomerD
     /**
      * @see GenericJpaDao#GenericJpaDao(JpaSessionManager, Class)
      */
-    public JpaCustomerDao(JpaSessionManager sm) {
-        super(sm, Customer.class);
-    }
+    //public JpaCustomerDao(JpaSessionManager sm) {
+    //    super(sm, Customer.class);
+    //}
 
     /**
      * @see CustomerDao#getCustomerIds()

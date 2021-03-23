@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:constant id="stdin" static-field="java.lang.System.in"/>
+    <util:constant id="stdout" static-field="java.lang.System.out"/>
+
+    <bean id="prompt" class="org.academiadecodigo.bootcamp.Prompt">
+        <constructor-arg name="input" ref="stdin"/>
+        <constructor-arg name="output" ref="stdout"/>
+    </bean>
+
+    <bean id="loginview" class="org.academiadecodigo.javabank.view.LoginView">
+        <property name="loginController" ref="loginController"/>
+        <property name="prompt" ref="prompt"/>
+    </bean>
+
+
+</beans>
