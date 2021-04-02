@@ -115,6 +115,12 @@
             <version>2.3.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.2.Final</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -140,6 +146,8 @@
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
                     <path>/javabank3</path>
+                    <username>maven</username>
+                    <password>maven</password>
                 </configuration>
             </plugin>
 
