@@ -4,6 +4,7 @@ import org.academiadecodigo.javabank.persistence.model.account.Account;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -147,14 +148,14 @@ public class Customer extends AbstractModel {
         account.setCustomer(this);
     }
 
-    /**
-     * Removes an account from the customer
-     *
-     * @param account the account to remove
-     */
-    public void removeAccount(Account account) {
-        accounts.remove(account);
-        account.setCustomer(null);
+    public void removeAccount(Integer accountId) {
+        Iterator<Account> accountIterator = getAccounts().iterator();
+
+        while(accountIterator.hasNext()) {
+            if(accountIterator.next().getId().equals(accountId)) {
+                accountIterator.remove();
+            }
+        }
     }
 
     /**

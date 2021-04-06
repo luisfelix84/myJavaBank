@@ -21,6 +21,8 @@ public class CustomerDto {
     @Size(min = 3, max = 64)
     private String lastName;
 
+    @NotNull
+    @NotBlank(message = "fuooooodassssseee")
     @Email
     private String email;
 
